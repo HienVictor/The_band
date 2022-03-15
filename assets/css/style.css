@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+ */
+
+/* 
+1. vị trí
+2. kích thước(width,height)
+3. màu sắc
+4. kiểu dáng(kiểu chữ, hình tròn, vuông...)
+*/
+.text-white {
+    color: #fff !important;
+}
+
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: rgb(0 ,0 ,0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .nav-caret-down {
+    
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li{
+    list-style: none;
+    position: relative;
+}
+
+#nav > li > a {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+/* nên hover cho thẻ li vì chỉ hover cho a thì khi di chuột ra khỏi diện tích a 
+mà vẫn còn li thì ko còn bị chịu tác động hover nữa */
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+/* cách 1 hover nhứ này */
+#nav > li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+
+.subnav li:hover a {
+    background-color: #ccc;
+    
+}
+/* cách 2 hover nhứ này 
+
+#nav li:hover{
+    background-color: #ccc;
+}
+#nav li:hover a{
+    color: #000;
+} */
+
+/* Xử lí menu cấp 2. */
+
+
+#nav li .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 13px #888888;
+    min-width: 160px;
+}
+
+#nav .subnav a {
+    color: rgb(0 ,0 ,0);
+    padding: 0 16px;
+    line-height: 38px;
+}
+
+#header .search-btn {
+    float: right;
+    color: #fff;
+    
+}
+
+#header .search-btn-fa {
+    line-height: 46px;
+    padding: 0 23px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url("/assets/img/slider/slider2.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 48px;
+    text-align: center;
+    color: #fff;
+    /* left: 50%;
+    transform: translate(-50%); */
+    left: 0;
+    right: 0;
+}
+
+#slider .text-heading {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* màu của text của tour */
+
+#content {
+    
+    
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading {
+    
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+#content .section-sub-heading {
+    margin: 25px 0 15px 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .about-text {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-list {
+    display: flex;
+    margin-top: 48px;
+    
+}
+
+#content .member-item {
+    /* display: inline-block; */
+    flex: 30%;
+    text-align: center;
+}
+
+#content .member-name {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 154px;
+    height: 154px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+
+.tour-section {
+    background-color: #000;
+}
+
+.ticket-list {
+    background-color: #fff;
+}
+
+.ticket-list li {
+    padding: 8px 16px;
+    border-bottom: solid 1px #ddd;
+}
+
+#footer {
+
+}
+
+
+
+/* test */
+.parent {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.parent .chilrd {
+    flex-basis: 1;
+    
+}
+
+.parent .img {
+    width: 254px;
+    height: 191px;
+}
+.contact-box {
+    width: 254px;
+    background-color: #ffffff;
+}
+.chilrd > p{
+    
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.parent .actor-name,
+.parent .actor-date,
+.parent .actor-description {
+    /* margin: 15px 0; */
+}
+
+.parent .actor-date {
+
+}
+
+.parent .actor-description {
+
+}
+
+.parent .chilrd-one {
+
+}
+.parent .chilrd-one {
+
+}
+.parent .chilrd-one {
+
+}
+
+.content-section .contact-test {
+    display: flex;
+    justify-content: space-between;
+} 
+.form-contact .message{
+    width: 100%;
+}
+.form-contact .submit-test {
+    float: right;
+}
+
+.parent {
+    position: relative;
+}
+.contact-box {
+    position: absolute;
+    top: 191px;
+}
