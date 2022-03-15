@@ -130,7 +130,7 @@ mà vẫn còn li thì ko còn bị chịu tác động hover nữa */
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background-image: url("/assets/img/slider/slider2.png");
+    background-image: url("../img/slider/slider2.png");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
